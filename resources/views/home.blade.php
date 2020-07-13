@@ -13,10 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form method="POST" action="{{route('client.store')}}">
-                        @csrf
-                        <sii-rut></sii-rut>
-                    </form>
+                        Bienvenido!
                     
                 </div>
             </div>
