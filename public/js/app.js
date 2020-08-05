@@ -1989,6 +1989,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 Vue.directive('rut', vue_dni__WEBPACK_IMPORTED_MODULE_0__["rutInputDirective"]);
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2010,7 +2011,9 @@ Vue.directive('rut', vue_dni__WEBPACK_IMPORTED_MODULE_0__["rutInputDirective"]);
     rutSearch: function rutSearch() {
       var _this = this;
 
-      var rut = this.rutInput.toString().split('-')[0].replaceAll('.', '');
+      var rutNoDV = this.rutInput.toString().split('-')[0];
+      var rut = rutNoDV.split('.').join('');
+      console.log(rut);
       axios.get('https://compshub.asomic.com/companies/' + rut).then(function (response) {
         if (response.status == 200) {
           _this.rutValue = response.data.data.RUT;

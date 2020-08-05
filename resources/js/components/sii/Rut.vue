@@ -4,6 +4,7 @@
             <label class="m-2">Rut</label>
             <input type="text" name="user[rut]" v-rut:live v-model="rutInput">
             <button class="btn btn-success m-2 btn-sm" type="text" @click.prevent.self="rutSearch">Buscar</button>
+            
         </div>
         <div class="card" v-if="rutValue">
             <div class="card-body">
@@ -47,7 +48,11 @@
         },
         methods: {
             rutSearch() {
-                let rut = this.rutInput.toString().split('-')[0].replaceAll('.', '');
+
+
+                let rutNoDV = this.rutInput.toString().split('-')[0];
+                let rut = rutNoDV.split('.').join('');
+                console.log(rut);
                 axios
                     .get('https://compshub.asomic.com/companies/' + rut)
                     .then(response => {
@@ -56,6 +61,7 @@
                             this.razonValue = response.data.data.RazonSocial;
                         } else {
                             this.rutValue = null;
+
                             console.log('error rut');
                         }
                         
