@@ -56,6 +56,10 @@
                     <input name="name" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label>Precio</label>
+                    <input name="name" class="form-control">
+                </div>
+                <div class="form-group">
                     <button class="btn btn-success ">Guardar</button>
                 </div>
             </form>
