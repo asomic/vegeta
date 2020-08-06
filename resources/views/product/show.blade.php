@@ -3,36 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-3">
-            <div class="card">
+        <div class="col-md-3 mb-4">
+            <div class="card mb-4">
                 <div class="card-header">
-                    Cliente
+                    {{$product->name}}
                 </div>
                 <div class="card-body">
-                    <label for="rut">RUT</label>
-                    <p> {{$client->rut}}</p>
-                    <label for="razon">Razon Social</label>
-                    <p> {{$client->razon_social}}</p>
-                    <label for="rut">Giro</label>
-                    <p> {{$client->giro}}</p>
+                    <img width="100%" src="{{asset('/img/default.png')}}">
+                    
                 </div>
-            </div>
-        </div>
 
-        <div class="col-8">
-            <div class="card">
-                <div class="card-header">
-                    Ordenes
-                </div>
-                <div class="card-body">
-                    <label for="rut">RUT</label>
-                    <p> {{$client->rut}}</p>
-                    <label for="razon">Razon Social</label>
-                    <p> {{$client->razon_social}}</p>
-                    <label for="rut">Giro</label>
-                    <p> {{$client->giro}}</p>
-                </div>
             </div>
+            <a class="btn btn-success btn-block">Información</a>
+            <a class="btn btn-success btn-block">Imagenes</a>
+            <a class="btn btn-success btn-block">Documentos</a>
         </div>
     </div>
 </div>

@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-3">
-            <div class="card">
+        <div class="col-md-3 mb-4">
+            <div class="card mb-4">
                 <div class="card-header">
                     Cliente
                 </div>
@@ -16,10 +16,13 @@
                     <label for="rut">Giro</label>
                     <p> {{$client->giro}}</p>
                 </div>
+
             </div>
+            <button class="btn btn-success btn-block">Nueva orden</button>
         </div>
 
-        <div class="col-8">
+
+        <div class="col-md-8 mb-4">
             <div class="card">
                 <div class="card-header">
                     Historial

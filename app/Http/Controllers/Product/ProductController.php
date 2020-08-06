@@ -22,7 +22,7 @@ class ProductController extends Controller
         return view('product.index',['products' => $products]);
     }
 
-    public function show(Products $product)
+    public function show(Product $product)
     {
         return view('product.show',['product' => $product]);
     }
@@ -30,7 +30,8 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = new Product; 
-
+        $product->name = $request->name;
+       // $product->description = $request->description;
         $product->save();
         return redirect()->route('product.show',['product' => $product->id]);
     }
