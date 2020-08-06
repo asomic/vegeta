@@ -5,7 +5,7 @@
     </div>
     <img  class="card-img-top" src="{{asset('/img/default.png')}}">
     <div class="card-body">
-        <img  class="card-img-top" src="{{asset('/img/default.png')}}">
+       
         
     </div>
 

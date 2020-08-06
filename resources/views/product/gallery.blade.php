@@ -4,20 +4,22 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3 mb-4">
-            <div class="card mb-4">
-                <div class="card-header">
-                    {{$product->name}}
-
-                </div>
-                <div class="card-body">
-                    <img width="100%" src="{{asset('/img/default.png')}}">
-                    
-                </div>
-
+            @include('product.sidebar')
+        </div>
+        <div class="col-md-9 mb-4">
+            <button class="btn btn-success ">Nueva Imagen</button>
+            <div class="row">
+                @for ($i = 0; $i < 5; $i++)
+                    <div class="col-4 ">
+                        <img width="100" class="m-2" src="{{asset('/img/default.png')}}">
+                    </div>
+                @endfor
             </div>
-            <a class="btn btn-success btn-block" href="{{route('product.show', ['product'=>$product->id])}}">Información</a>
-            <a class="btn btn-success btn-block" href="{{route('product.gallery.show', ['product'=>$product->id])}}">Imagenes</a>
-            <a class="btn btn-success btn-block" href="{{route('product.document.show', ['product'=>$product->id])}}">Documentos</a>
+            {{-- <div class="card">
+                <div class="card-body">
+                    hola
+                </div>
+            </div> --}}
         </div>
     </div>
 </div>

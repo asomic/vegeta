@@ -35,4 +35,15 @@ class ProductController extends Controller
         $product->save();
         return redirect()->route('product.show',['product' => $product->id]);
     }
+
+    public function galleryShow(Product $product)
+    {
+        return view('product.gallery',['product' => $product]);
+    }
+
+    public function documentShow(Product $product)
+    {
+        return view('product.document',['product' => $product]);
+    }
+
 }
