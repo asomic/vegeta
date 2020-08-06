@@ -24,8 +24,8 @@
                         <tbody>
                             @foreach ($products as $product)
                             <tr>
-                                <td>{{$product->nombre}}</td>
-                                <td>
+                                <td>{{strtoupper ($product->name)}}</td>
+                                <td class="">
                                     <a class="btn btn-success" href="{{route('product.show',['product'=>$product->id])}}" >Ver</a>
                                 </td>
                             </tr>

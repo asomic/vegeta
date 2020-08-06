@@ -21,4 +21,6 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('client','Client\ClientController');
 Route::resource('product','Product\ProductController');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/product/{product}/gallery', 'ProductController@galleryShow')->name('product.gallery.show');
+Route::get('/product/{product}/document', 'ProductController@documentShow')->name('product.document.show');
+
