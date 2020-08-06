@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "vue-dni": "^1.0.1"
+        "vue-dni": "^1.0.1",
+        "vue-wysiwyg": "^1.7.2"
     }
 }

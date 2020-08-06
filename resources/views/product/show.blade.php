@@ -7,7 +7,14 @@
             @include('product.sidebar')
         </div>
         <div class="col-md-9 mb-4">
-            <div></div>
+            <div class="card" >
+                <div class="card-header">
+                    Resumen
+                </div>
+                <div class="card-body">
+                    Resumen
+                </div>
+            </div>
         </div>
     </div>
 </div>
