@@ -22,6 +22,7 @@ window.Vue = require('vue');
 
 Vue.component('sii-rut', require('./components/sii/Rut.vue').default);
 Vue.component('client-table', require('./components/client/Table.vue').default);
+Vue.component('order-create', require('./components/order/Create.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
