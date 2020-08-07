@@ -3,9 +3,10 @@
         {{$product->name}}
 
     </div>
-    <img  class="card-img-top" src="{{asset('/img/default.png')}}">
+    
+    <img  class="card-img-top" src="{{asset('/img/ga.png')}}">
     <div class="card-body">
-       
+        ${{ number_format($product->value, 0, ',', '.')}} + iva
         
     </div>
 
